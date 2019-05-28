@@ -42,6 +42,14 @@ namespace SeatReplacement
         static extern int SDT_OpenPort(int iPort);
         [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
         static extern int SDT_ClosePort(int iPort);
+        [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
+        static extern int SDT_GetCOMBaud(int iPort, ref UInt32 puiBaudRate);
+        [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
+        static extern int SDT_SetCOMBaud(int iPort, UInt32 uiCurrBaud, UInt32 uiSetBaud);
+        [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
+        static extern int SDT_ResetSAM(int iPort, int iIfOpen);
+        [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
+        static extern int SDT_GetSAMStatus(int iPort, int iIfOpen);
         #endregion
         /// <summary>
         /// 窗体加载
@@ -100,36 +108,75 @@ namespace SeatReplacement
             try
             {
                 int iRet = 0;
-                int iPort = Convert.ToInt32(ConfigurationManager.AppSettings["iPort"]);
+                //int iPort = Convert.ToInt32(ConfigurationManager.AppSettings["iPort"]);
+                int iPort = 4;
                 //变量声明
                 byte[] CardPUCIIN = new byte[255];
                 byte[] pucManaMsg = new byte[255];
                 byte[] pucCHMsg = new byte[255];
                 byte[] pucPHMsg = new byte[3024];
+                
+
                 UInt32 puiCHMsgLen = 0;
                 UInt32 puiPHMsgLen = 0;
+                UInt32 puiBaudRate = 0;
                 int st = 0;
+                //查看串口当前波特率
+                int baudRate = SDT_GetCOMBaud(iPort, ref puiBaudRate);
+                if (baudRate!= 0x90)
+                {
+                    tIdentity.Start();
+                    return;
+                }
+                //设置SAM_V 的串口的波特率
+                int baudRatee = SDT_SetCOMBaud(iPort, puiBaudRate, puiBaudRate);
+                if (baudRatee != 0x90)
+                {
+                    tIdentity.Start();
+                    return;
+                }
+                //打开串口/USB
                 iRet = SDT_OpenPort(iPort);
                 if (iRet != 0x90)
                 {
+                    //关闭串口/USB
                     SDT_ClosePort(iPort);
                     tIdentity.Start();
                     return;
                 }
-
-                //读卡操作
-                st = SDT_StartFindIDCard(iPort, CardPUCIIN, 1);
+                //对 SAM_V 复位
+                int sam =SDT_ResetSAM(iPort,0);
+                if (sam != 0x90)
+                {
+                    //关闭串口/USB
+                    SDT_ClosePort(iPort);
+                    tIdentity.Start();
+                    return;
+                }
+                //对 SAM_V 进行状态检测
+                int samstate = SDT_GetSAMStatus(iPort,0);
+                if (samstate != 0x90)
+                {
+                    //关闭串口/USB
+                    SDT_ClosePort(iPort);
+                    tIdentity.Start();
+                    return;
+                }
+                //开始找卡
+                st = SDT_StartFindIDCard(iPort, CardPUCIIN, 0);
                 if (st != 0x9f) {
                     tIdentity.Start();
                     return;
                 }
-                st = SDT_SelectIDCard(iPort, pucManaMsg, 1);
+                //选卡
+                st = SDT_SelectIDCard(iPort, pucManaMsg, 0);
                 if (st != 0x90)
                 {
                     tIdentity.Start();
                     return;
                 }
-                st = SDT_ReadBaseMsg(iPort, pucCHMsg, ref puiCHMsgLen, pucPHMsg, ref puiPHMsgLen, 1);
+                //读取证/卡固定信息
+                st = SDT_ReadBaseMsg(iPort, pucCHMsg, ref puiCHMsgLen, pucPHMsg, ref puiPHMsgLen, 0);
                 if (st != 0x90)
                 {
                     tIdentity.Start();
@@ -207,6 +254,7 @@ namespace SeatReplacement
             sw.WriteLine("                                                   ");
             sw.Close();
         }
+
         private void docToPrint_PrintPage(object sender, PrintPageEventArgs e)
         {
             switch (this.streamType)
@@ -325,6 +373,11 @@ namespace SeatReplacement
                         this.back.Visibility = Visibility.Hidden;
                         this.topTitle.Content = "席位置换自助终端";
                     }));
+                }
+                else
+                {
+                    tTicket.Start();
+                    return;
                 }
             }
             catch (Exception ex)
