@@ -1,0 +1,758 @@
+[Root]
+Most Recent Package=标准安装软件包 3
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package (2)
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+
+[Package|Standard Setup Package 1|Files Released]
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\Program Files\Common Files\System\ado\msado25.tlb=
+C:\WINNT\system32\TTF16.ocx=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+C:\Program Files\Microsoft Office\Office\MSCAL.OCX=
+C:\WINNT\system32\MSCOMCTL.OCX=
+
+[Package|Standard Setup Package 1|Files Added]
+d:\hxgcnewwork\公安部\非接触读写器\最新的演示程序\带打印的程序\dbsfz.mdb=
+
+[Package|Standard Setup Package 1|Files Removed]
+c:\winnt\system32\msvbvm60.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\oleaut32.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\olepro32.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\asycfilt.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\stdole2.tlb=
+c:\win2000app\vb98\wizards\pdwizard\redist\comcat.dll=
+
+[Package|Standard Setup Package 1|Files In Project]
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Project1.exe=Yes
+C:\WINNT\system32\msvbvm60.dll=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=No
+C:\WINNT\system\sdtapi.dll=Yes
+C:\WINNT\system\WltRS.dll=Yes
+C:\Program Files\Common Files\System\ado\msado25.tlb=Yes
+C:\WINNT\system32\MSCOMCTL.OCX=Yes
+C:\WINNT\system32\MSADODC.OCX=Yes
+C:\WINNT\system32\msstdfmt.dll=Yes
+C:\Program Files\Microsoft Office\Office\MSCAL.OCX=Yes
+C:\WINNT\system32\MSFLXGRD.OCX=Yes
+C:\WINNT\system32\comdlg32.ocx=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\DbSFZ.mdb=Yes
+C:\WINNT\system32\TTF16.ocx=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Project1.exe=$(AppPath)
+C:\WINNT\system\sdtapi.dll=$(AppPath)
+C:\WINNT\system\WltRS.dll=$(AppPath)
+C:\Program Files\Common Files\System\ado\msado25.tlb=$(WinSysPath)
+C:\WINNT\system32\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINNT\system32\MSADODC.OCX=$(WinSysPath)
+C:\WINNT\system32\msstdfmt.dll=$(WinSysPath)
+C:\Program Files\Microsoft Office\Office\MSCAL.OCX=$(WinSysPath)
+C:\WINNT\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINNT\system32\comdlg32.ocx=$(WinSysPath)
+C:\TIDESTONE\FORMONE6\TTF16.ocx=$(WinSysPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\DbSFZ.mdb=$(AppPath)
+C:\WINNT\system32\TTF16.ocx=$(WinSysPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Project1.exe=No
+C:\WINNT\system\sdtapi.dll=No
+C:\WINNT\system\WltRS.dll=No
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\DbSFZ.mdb=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=第二代居民身份证验证系统
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package (2)
+ProjectFolder=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序
+ServerSideCab=
+File1=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package (2)\setup.exe
+File2=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package (2)\Setup.Lst
+File3=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package (2)\Project1.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=第二代居民身份证验证系统
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|第二代居民身份证验证系统]
+Icon1=Project1.exe
+Title1=第二代居民身份证验证系统
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|Standard Setup Package 2|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package
+
+[Package|Standard Setup Package 2|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 2|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 2|Files Found]
+
+[Package|Standard Setup Package 2|Files Released]
+
+[Package|Standard Setup Package 2|Missing Dependency Information]
+C:\WINNT\system32\TTF16.ocx=
+C:\Program Files\Common Files\System\ado\msado25.tlb=
+
+[Package|Standard Setup Package 2|Out-of-Date Dependency Information]
+C:\Program Files\Microsoft Office\Office\MSCAL.OCX=
+C:\WINNT\system32\mscomctl.ocx=
+
+[Package|Standard Setup Package 2|Files Added]
+d:\hxgcnewwork\公安部\非接触读写器\最新的演示程序\带打印的程序\dbsfz.mdb=
+
+[Package|Standard Setup Package 2|Files Removed]
+c:\winnt\system32\msvbvm60.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\oleaut32.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\olepro32.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\asycfilt.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\stdole2.tlb=
+c:\win2000app\vb98\wizards\pdwizard\redist\comcat.dll=
+
+[Package|Standard Setup Package 2|Files In Project]
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Project1.exe=Yes
+C:\WINNT\system32\msvbvm60.dll=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=No
+C:\WINNT\system\sdtapi.dll=Yes
+C:\WINNT\system\WltRS.dll=Yes
+C:\WINNT\system32\mscomctl.ocx=Yes
+C:\WINNT\system32\MSADODC.OCX=Yes
+C:\WINNT\system32\msstdfmt.dll=Yes
+C:\Program Files\Microsoft Office\Office\MSCAL.OCX=Yes
+C:\WINNT\system32\MSFLXGRD.OCX=Yes
+C:\WINNT\system32\comdlg32.ocx=Yes
+C:\WINNT\system32\TTF16.ocx=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\DbSFZ.mdb=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+
+[Package|Standard Setup Package 2|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 2|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 2|Install Locations]
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Project1.exe=$(AppPath)
+C:\WINNT\system\sdtapi.dll=$(AppPath)
+C:\WINNT\system\WltRS.dll=$(AppPath)
+C:\Program Files\Common Files\System\ado\msado25.tlb=$(WinSysPath)
+C:\WINNT\system32\mscomctl.ocx=$(WinSysPath)
+C:\WINNT\system32\MSADODC.OCX=$(WinSysPath)
+C:\WINNT\system32\msstdfmt.dll=$(WinSysPath)
+C:\Program Files\Microsoft Office\Office\MSCAL.OCX=$(WinSysPath)
+C:\WINNT\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINNT\system32\comdlg32.ocx=$(WinSysPath)
+C:\WINNT\system32\TTF16.ocx=$(WinSysPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\DbSFZ.mdb=$(AppPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+
+[Package|Standard Setup Package 2|Configure Shared Files]
+Applicable=Yes
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Project1.exe=No
+C:\WINNT\system\sdtapi.dll=No
+C:\WINNT\system\WltRS.dll=No
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\DbSFZ.mdb=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+
+[Package|Standard Setup Package 2|Distribution]
+Type=single
+Size=
+Title=第二代居民身份证验证系统
+
+[Package|Standard Setup Package 2|Package]
+PackageFolder=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package
+ProjectFolder=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序
+ServerSideCab=
+File1=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package\setup.exe
+File2=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package\Setup.Lst
+File3=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package\Project1.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|Standard Setup Package 2|IconGroups]
+Group0=第二代居民身份证验证系统
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 2|第二代居民身份证验证系统]
+Icon1=Project1.exe
+Title1=第二代居民身份证验证系统
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|Standard Setup Package 3|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package (2)
+
+[Package|Standard Setup Package 3|Configure DAO ISAMs]
+Applicable=No
+
+[Package|Standard Setup Package 3|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 3|Files Found]
+
+[Package|Standard Setup Package 3|Files Released]
+
+[Package|Standard Setup Package 3|Missing Dependency Information]
+C:\WINNT\system32\TTF16.ocx=
+
+[Package|Standard Setup Package 3|Out-of-Date Dependency Information]
+C:\Program Files\Microsoft Office\Office\MSCAL.OCX=
+C:\WINNT\system32\mscomctl.ocx=
+
+[Package|Standard Setup Package 3|Files Added]
+d:\hxgcnewwork\公安部\非接触读写器\最新的演示程序\带打印的程序\dbsfz.mdb=
+
+[Package|Standard Setup Package 3|Files Removed]
+c:\program files\microsoft office\office\mscal.ocx=
+
+[Package|Standard Setup Package 3|Files In Project]
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Project1.exe=Yes
+C:\WINNT\system32\msvbvm60.dll=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINNT\system\sdtapi.dll=Yes
+C:\WINNT\system\WltRS.dll=Yes
+C:\WINNT\system32\TTF16.ocx=Yes
+C:\WINNT\system32\mscomctl.ocx=Yes
+C:\Program Files\Microsoft Office\Office\MSCAL.OCX=No
+C:\WINNT\system32\MSFLXGRD.OCX=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\DbSFZ.mdb=Yes
+
+[Package|Standard Setup Package 3|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 3|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 3|Install Locations]
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Project1.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system\sdtapi.dll=$(AppPath)
+C:\WINNT\system\WltRS.dll=$(AppPath)
+C:\WINNT\system32\TTF16.ocx=$(WinSysPath)
+C:\WINNT\system32\mscomctl.ocx=$(WinSysPath)
+C:\WINNT\system32\MSADODC.OCX=$(WinSysPath)
+C:\WINNT\system32\msstdfmt.dll=$(WinSysPath)
+C:\Program Files\Microsoft Office\Office\MSCAL.OCX=$(WinSysPath)
+C:\WINNT\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\DbSFZ.mdb=$(AppPath)
+
+[Package|Standard Setup Package 3|Configure Shared Files]
+Applicable=Yes
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Project1.exe=No
+C:\WINNT\system\sdtapi.dll=No
+C:\WINNT\system\WltRS.dll=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\DbSFZ.mdb=No
+
+[Package|Standard Setup Package 3|Distribution]
+Type=single
+Size=
+Title=第二代居民身份证验证系统
+
+[Package|Standard Setup Package 3|Package]
+PackageFolder=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package (2)
+ProjectFolder=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序
+ServerSideCab=
+File1=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package (2)\setup.exe
+File2=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package (2)\Setup.Lst
+File3=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Package (2)\Project1.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|Standard Setup Package 3|IconGroups]
+Group0=第二代居民身份证验证系统
+PrivateGroup0=-1
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 3|第二代居民身份证验证系统]
+Icon1=Project1.exe
+Title1=第二代居民身份证验证系统
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|标准安装软件包 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\包
+
+[Package|标准安装软件包 1|Configure DAO ISAMs]
+Applicable=No
+
+[Package|标准安装软件包 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|标准安装软件包 1|Files Found]
+
+[Package|标准安装软件包 1|Files Released]
+
+[Package|标准安装软件包 1|Missing Dependency Information]
+C:\WINNT\system32\TTF16.ocx=
+
+[Package|标准安装软件包 1|Out-of-Date Dependency Information]
+C:\Program Files\Microsoft Office\Office\MSCAL.OCX=
+C:\WINNT\system32\mscomctl.ocx=
+C:\WINNT\system32\MSCAL.OCX=
+
+[Package|标准安装软件包 1|Files Added]
+d:\hxgcnewwork\公安部\非接触读写器\最新的演示程序\带打印的程序\dbsfz.mdb=
+
+[Package|标准安装软件包 1|Files Removed]
+c:\winnt\system32\msvbvm60.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\oleaut32.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\olepro32.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\asycfilt.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\stdole2.tlb=
+c:\win2000app\vb98\wizards\pdwizard\redist\comcat.dll=
+
+[Package|标准安装软件包 1|Files In Project]
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Project1.exe=Yes
+C:\WINNT\system32\msvbvm60.dll=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=No
+C:\WINNT\system32\VB6CHS.DLL=Yes
+C:\WINNT\system\sdtapi.dll=Yes
+C:\WINNT\system\WltRS.dll=Yes
+C:\WINNT\system32\TTF16.ocx=Yes
+C:\WINNT\system32\mscomctl.ocx=Yes
+C:\WINNT\system32\MSCMCCHS.DLL=Yes
+C:\WINNT\system32\MSFLXGRD.OCX=Yes
+C:\WINNT\system32\FLXGDCHS.DLL=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\DbSFZ.mdb=Yes
+C:\WINNT\system32\MSCAL.OCX=Yes
+
+[Package|标准安装软件包 1|Configure Registry Files]
+Applicable=No
+
+[Package|标准安装软件包 1|Configure Remote Servers]
+Applicable=No
+
+[Package|标准安装软件包 1|Install Locations]
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Project1.exe=$(AppPath)
+C:\WINNT\system32\VB6CHS.DLL=$(WinSysPath)
+C:\WINNT\system\sdtapi.dll=$(AppPath)
+C:\WINNT\system\WltRS.dll=$(AppPath)
+C:\WINNT\system32\TTF16.ocx=$(WinSysPath)
+C:\WINNT\system32\mscomctl.ocx=$(WinSysPath)
+C:\WINNT\system32\MSCMCCHS.DLL=$(WinSysPath)
+C:\Program Files\Microsoft Office\Office\MSCAL.OCX=$(WinSysPath)
+C:\WINNT\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINNT\system32\FLXGDCHS.DLL=$(WinSysPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\DbSFZ.mdb=$(AppPath)
+C:\WINNT\system32\MSCAL.OCX=$(WinSysPath)
+
+[Package|标准安装软件包 1|Configure Shared Files]
+Applicable=Yes
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\Project1.exe=No
+C:\WINNT\system\sdtapi.dll=No
+C:\WINNT\system\WltRS.dll=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\DbSFZ.mdb=No
+
+[Package|标准安装软件包 1|Distribution]
+Type=single
+Size=
+Title=第二代居民身份证验证系统
+
+[Package|标准安装软件包 1|Package]
+PackageFolder=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\包
+ProjectFolder=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序
+ServerSideCab=
+File1=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\包\setup.exe
+File2=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\包\Setup.Lst
+File3=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\包\Project1.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+[Package|标准安装软件包 1|IconGroups]
+Group0=第二代居民身份证验证系统
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|标准安装软件包 1|第二代居民身份证验证系统]
+Icon1=Project1.exe
+Title1=第二代居民身份证验证系统
+StartIn1=$(AppPath)
+Key1=Icon1
+
+
+[Package|标准安装软件包 2|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\包
+
+[Package|标准安装软件包 2|Configure DAO ISAMs]
+Applicable=No
+
+[Package|标准安装软件包 2|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|标准安装软件包 2|Files Found]
+DbSFZ.mdb=D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\DbSFZ.mdb
+
+[Package|标准安装软件包 2|Files Released]
+
+[Package|标准安装软件包 2|Missing Dependency Information]
+C:\WINNT\system32\TTF16.ocx=
+
+[Package|标准安装软件包 2|Out-of-Date Dependency Information]
+C:\WINNT\system32\MSCAL.OCX=
+C:\WINNT\system32\mscomctl.ocx=
+
+[Package|标准安装软件包 2|Files Added]
+dbsfz.mdb=
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\用户帮助文件.chm=
+
+[Package|标准安装软件包 2|Files Removed]
+c:\winnt\system32\msvbvm60.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\oleaut32.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\olepro32.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\asycfilt.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\stdole2.tlb=
+c:\win2000app\vb98\wizards\pdwizard\redist\comcat.dll=
+
+[Package|标准安装软件包 2|Files In Project]
+C:\WINNT\system32\msvbvm60.dll=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=No
+C:\WINNT\system32\VB6CHS.DLL=Yes
+C:\WINNT\system\sdtapi.dll=Yes
+C:\WINNT\system\WltRS.dll=Yes
+C:\WINNT\system32\TTF16.ocx=Yes
+C:\WINNT\system32\mscomctl.ocx=Yes
+C:\WINNT\system32\MSCMCCHS.DLL=Yes
+C:\WINNT\system32\MSCAL.OCX=Yes
+C:\WINNT\system32\MSFLXGRD.OCX=Yes
+C:\WINNT\system32\FLXGDCHS.DLL=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+C:\WIN2000APP\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\第二代居民身份证验证程序.exe=Yes
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\DbSFZ.mdb=Yes
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\用户帮助文件.chm=Yes
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\用户帮助文件.chi=Yes
+C:\WINNT\system32\hhctrl.ocx=Yes
+C:\WINNT\system32\itss.dll=Yes
+C:\WINNT\system32\itircl.dll=Yes
+C:\WINNT\system32\hh.exe=Yes
+
+[Package|标准安装软件包 2|Configure Registry Files]
+Applicable=No
+
+[Package|标准安装软件包 2|Configure Remote Servers]
+Applicable=No
+
+[Package|标准安装软件包 2|Install Locations]
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\第二代居民身份证验证程序.exe=$(AppPath)
+C:\WINNT\system32\VB6CHS.DLL=$(WinSysPath)
+C:\WINNT\system\sdtapi.dll=$(AppPath)
+C:\WINNT\system\WltRS.dll=$(AppPath)
+C:\WINNT\system32\TTF16.ocx=$(WinSysPath)
+C:\WINNT\system32\mscomctl.ocx=$(WinSysPath)
+C:\WINNT\system32\MSCMCCHS.DLL=$(WinSysPath)
+C:\WINNT\system32\MSCAL.OCX=$(WinSysPath)
+C:\WINNT\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINNT\system32\FLXGDCHS.DLL=$(WinSysPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\DbSFZ.mdb=$(AppPath)
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\第二代居民身份证验证程序.exe=$(AppPath)
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\DbSFZ.mdb=$(AppPath)
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\用户帮助文件.chm=$(AppPath)
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\用户帮助文件.chi=$(AppPath)
+C:\WINNT\system32\hhctrl.ocx=$(WinSysPath)
+C:\WINNT\system32\itss.dll=$(WinSysPath)
+C:\WINNT\system32\itircl.dll=$(WinSysPath)
+C:\WINNT\system32\hh.exe=$(WinSysPath)
+
+[Package|标准安装软件包 2|Configure Shared Files]
+Applicable=Yes
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\第二代居民身份证验证程序.exe=No
+C:\WINNT\system\sdtapi.dll=No
+C:\WINNT\system\WltRS.dll=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\DbSFZ.mdb=No
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\第二代居民身份证验证程序.exe=No
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\DbSFZ.mdb=No
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\用户帮助文件.chm=No
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\用户帮助文件.chi=No
+
+[Package|标准安装软件包 2|Distribution]
+Type=single
+Size=
+Title=第二代居民身份证验证系统
+
+[Package|标准安装软件包 2|IconGroups]
+Group0=第二代居民身份证验证系统
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|标准安装软件包 2|第二代居民身份证验证系统]
+Icon1=第二代居民身份证验证程序.exe
+Title1=第二代居民身份证验证系统
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|标准安装软件包 2|Package]
+PackageFolder=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\包
+ProjectFolder=D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序
+ServerSideCab=
+File1=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\包\setup.exe
+File2=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\包\Setup.Lst
+File3=D:\HXGCNewWork\公安部\非接触读写器\最新的演示程序\带打印的程序\包\第二代居民身份证验证程序.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|标准安装软件包 3|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\包
+
+[Package|标准安装软件包 3|Configure DAO ISAMs]
+Applicable=No
+
+[Package|标准安装软件包 3|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|标准安装软件包 3|Files Found]
+
+[Package|标准安装软件包 3|Files Released]
+
+[Package|标准安装软件包 3|Missing Dependency Information]
+C:\WINNT\system32\TTF16.ocx=
+
+[Package|标准安装软件包 3|Out-of-Date Dependency Information]
+C:\WINNT\system32\MSCAL.OCX=
+C:\WINNT\system32\mscomctl.ocx=
+
+[Package|标准安装软件包 3|Files Added]
+d:\hxgcnewwork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\dbsfz.mdb=
+d:\hxgcnewwork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\用户帮助文件.chm=
+
+[Package|标准安装软件包 3|Files Removed]
+c:\winnt\system32\msvbvm60.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\oleaut32.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\olepro32.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\asycfilt.dll=
+c:\win2000app\vb98\wizards\pdwizard\redist\stdole2.tlb=
+c:\win2000app\vb98\wizards\pdwizard\redist\comcat.dll=
+c:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\oleaut32.dll=
+c:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\olepro32.dll=
+c:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\asycfilt.dll=
+c:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\stdole2.tlb=
+c:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\comcat.dll=
+
+[Package|标准安装软件包 3|Files In Project]
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\第二代居民身份证验证程序.exe=Yes
+C:\WINNT\system32\msvbvm60.dll=No
+C:\WINNT\system32\VB6CHS.DLL=Yes
+C:\WINNT\system32\TTF16.ocx=Yes
+C:\WINNT\system32\mscomctl.ocx=Yes
+C:\WINNT\system32\MSCMCCHS.DLL=Yes
+C:\WINNT\system32\MSCAL.OCX=Yes
+C:\WINNT\system32\MSFLXGRD.OCX=Yes
+C:\WINNT\system32\FLXGDCHS.DLL=Yes
+C:\WINNT\system32\VB6STKIT.DLL=Yes
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\DbSFZ.mdb=Yes
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\用户帮助文件.chm=Yes
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\用户帮助文件.chi=Yes
+C:\WINNT\system32\hhctrl.ocx=Yes
+C:\WINNT\system32\itss.dll=Yes
+C:\WINNT\system32\itircl.dll=Yes
+C:\WINNT\system32\hh.exe=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=No
+C:\WINNT\system32\sdtapi.dll=Yes
+C:\WINNT\system32\WltRS.dll=Yes
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\WMFToBmp.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|标准安装软件包 3|Configure Registry Files]
+Applicable=No
+
+[Package|标准安装软件包 3|Configure Remote Servers]
+Applicable=No
+
+[Package|标准安装软件包 3|Install Locations]
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\第二代居民身份证验证程序.exe=$(AppPath)
+C:\WINNT\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINNT\system32\VB6CHS.DLL=$(WinSysPath)
+C:\WINNT\system\sdtapi.dll=$(AppPath)
+C:\WINNT\system\WltRS.dll=$(AppPath)
+C:\WINNT\system32\TTF16.ocx=$(WinSysPath)
+C:\WINNT\system32\mscomctl.ocx=$(WinSysPath)
+C:\WINNT\system32\MSCMCCHS.DLL=$(WinSysPath)
+C:\WINNT\system32\MSCAL.OCX=$(WinSysPath)
+C:\WINNT\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINNT\system32\FLXGDCHS.DLL=$(WinSysPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\WIN2000APP\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINNT\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\WIN2000APP\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\DbSFZ.mdb=$(AppPath)
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\用户帮助文件.chm=$(AppPath)
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\用户帮助文件.chi=$(AppPath)
+C:\WINNT\system32\hhctrl.ocx=$(WinSysPath)
+C:\WINNT\system32\itss.dll=$(WinSysPath)
+C:\WINNT\system32\itircl.dll=$(WinSysPath)
+C:\WINNT\system32\hh.exe=$(WinSysPath)
+C:\WINNT\system32\sdtapi.dll=$(AppPath)
+C:\WINNT\system32\WltRS.dll=$(AppPath)
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\WMFToBmp.dll=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|标准安装软件包 3|Configure Shared Files]
+Applicable=Yes
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\第二代居民身份证验证程序.exe=No
+C:\WINNT\system\sdtapi.dll=No
+C:\WINNT\system\WltRS.dll=No
+C:\WIN2000APP\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\DbSFZ.mdb=No
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\用户帮助文件.chm=No
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\用户帮助文件.chi=No
+C:\WINNT\system32\sdtapi.dll=No
+C:\WINNT\system32\WltRS.dll=No
+D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\WMFToBmp.dll=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=No
+
+[Package|标准安装软件包 3|Distribution]
+Type=single
+Size=
+Title=第二代居民身份证验证系统
+
+[Package|标准安装软件包 3|IconGroups]
+Group0=第二代居民身份证验证系统
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|标准安装软件包 3|第二代居民身份证验证系统]
+Icon1=第二代居民身份证验证程序.exe
+Title1=第二代居民身份证验证系统
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|标准安装软件包 3|Package]
+PackageFolder=D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\包
+ProjectFolder=D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序
+ServerSideCab=
+File1=D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\包\setup.exe
+File2=D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\包\Setup.Lst
+File3=D:\HXGCNewWork\公安部\第二代居民身份证项目\最新的演示程序\带打印的程序\包\第二代居民身份证验证程序.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
