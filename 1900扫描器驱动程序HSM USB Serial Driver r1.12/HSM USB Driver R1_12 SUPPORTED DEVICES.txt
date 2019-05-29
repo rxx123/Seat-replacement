@@ -1,0 +1,50 @@
+
+The HSM USB Serial Driver (Release 1.12 / Version 2.1.6.17) has been 
+WHQL-certified and supports the following devices:
+
+1. Xenon 1900 
+2. Xenon 1902 
+3. 3800g 
+4. 4600g 
+5. 4800p 
+6. Honeywell Access Point
+7. 4600r
+8. 4800i
+9. 2020 Cordless Base
+10. 5180 Image Engine
+11. 3800i
+12. 4800dr Document Reader
+13. QC890 Verifier
+14. 4206
+15. 5110 Image Engine
+16. MS4980 Vuquest (custom f/w required to support PID 0731 - see CC#500000018288)
+17. MS7580 Genesis (custom f/w required to support PID 0731 - see CC#500000018289)
+18. MS7580 Genesis
+19. MS9520 Voyager, MS9521 Voyager
+20. MS9540 VoyagerCG, MS9541 VoyagerCG
+21. MS9535 VoyagerBT
+22. MS9590 VoyagerGS, MS9590i VoyagerGS, MS9591i VoyagerGS
+23. MS3780 Fusion
+24. MS2420 Stratos, MS2421 Stratos, MS2422 Stratos, MS2430 Stratos, MS2431 Stratos 
+25. MS2320 StratosH, MS2321 StratosH, MS2322 StratosH
+26. MS2122 StratosE
+27. MS4980 Vuquest, MS4984 Vuquest
+28. MS7820 Solaris
+29. MS7600 Horizon
+30. MS3580 Quantum
+31. MS7120 Orbit, MS7180 OrbitCG
+32. Voyager 1200g
+33. N5600 Area Imaging Engine
+34. Hyperion 1300
+35. IS4823 Microquest Decode, IS4920 Vuquest, IS4125
+37. Access Point
+38. MS1690 Focus, MS1691 FocusHD, MS1633 FocusBT
+39. MS5145 Eclipse
+40. Voyager-1250
+41. Xenon 1900P2R2
+42. Xenon 1902P2R2
+43. Xenon 1500
+44. Vuquest 3310
+45. Voyager-CCB00
+
+ *** Devices not mentioned in the list are not currently supported ***

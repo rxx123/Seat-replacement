@@ -1,13 +1,16 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Drawing.Printing;
 using System.IO;
+using System.Net;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Navigation;
 using System.Windows.Threading;
 
 namespace SeatReplacement
@@ -17,6 +20,7 @@ namespace SeatReplacement
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region 变量
         Stream streamToPrint;
         string address = "";//打印txt存放地址
         string addressSave = "";//保存txt存放地址
@@ -25,31 +29,137 @@ namespace SeatReplacement
         private DispatcherTimer ShowTimer;
         System.Timers.Timer tIdentity;
         System.Timers.Timer tTicket;
+        #endregion
         public MainWindow()
         {
             InitializeComponent();
+            //address = infile.ReadValue("CONFIG", "ADDRESS");
+            //addressSave = infile.ReadValue("CONFIG", "ADDRESSSave");
+            //string a = "020569780311932141656018027901188600178574445818676009179083681404611325017558988810910223024416059959220427736603679376380069730519525691492099";
+            //var qrUrl = ConfigurationManager.AppSettings["QRURL"];
+            //string res = RestClient.HttpPost(qrUrl, a);
+            //TicketInfo ticketInfo = JsonConvert.DeserializeObject<TicketInfo>(res);
+            //TicketGet ticketGet = new TicketGet();
+            //ticketGet.trainDate = ticketInfo.ticket.trainDate;
+            //ticketGet.trainCodeAt = ticketInfo.ticket.trainCodeAt;
+            //ticketGet.coachNo = ticketInfo.ticket.coachNo;
+            //ticketGet.seatNo = ticketInfo.ticket.seatNo;
+            //ticketGet.seatType = ticketInfo.ticket.seatType;
+            //DataTable aa = SQLhelp.GetInfo(ticketGet);
+            //List<DJ60_change_seat_log> listdj = TableToList.ToDataList<DJ60_change_seat_log>(aa);
+            //dayinxieru(listdj);
+            //streamToPrint = new FileStream(@address, FileMode.OpenOrCreate, FileAccess.ReadWrite,
+            //    FileShare.None);
+            //// 创建一个PrintDialog的实例。 
+            //PrintDialog PrintDialog1 = new PrintDialog();
+            //// 把PrintDialog的Document属性设为上面配置好的PrintDocument的实例 
+            //streamToPrint.Close();
+            //PrintDocument p = new PrintDocument();
+            ////隐藏 对话框
+            //PrintController printController = new StandardPrintController();
+            //p.PrintController = printController;
+            ////创建打印画布
+            //p.PrintPage += new PrintPageEventHandler(docToPrint_PrintPage);
+            //p.Print();
         }
         #region API声明
         [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
         static extern int SDT_StartFindIDCard(int iPort, byte[] pucManaInfo, int iIfOpen);
+
         [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
         static extern int SDT_SelectIDCard(int iPort, byte[] pucManaMsg, int iIfOpen);
+
         [DllImport("sdtapi.dll")]
         private static extern int InitComm(int Port);//初始化
+
         [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
         static extern int SDT_ReadBaseMsg(int iPort, byte[] pucCHMsg, ref UInt32 puiCHMsgLen, byte[] pucPHMsg, ref UInt32 puiPHMsgLen, int iIfOpen);
+
         [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
         static extern int SDT_OpenPort(int iPort);
+
         [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
         static extern int SDT_ClosePort(int iPort);
+
         [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
         static extern int SDT_GetCOMBaud(int iPort, ref UInt32 puiBaudRate);
+
         [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
         static extern int SDT_SetCOMBaud(int iPort, UInt32 uiCurrBaud, UInt32 uiSetBaud);
+
         [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
         static extern int SDT_ResetSAM(int iPort, int iIfOpen);
+
         [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
         static extern int SDT_GetSAMStatus(int iPort, int iIfOpen);
+
+        //#define TX_TYPE_NONE 0
+        //#define TX_TYPE_USB 1 这个是 USB 口
+        //#define TX_TYPE_LPT 2 这个是并口
+        //#define TX_TYPE_COM 3 这个是串口
+        [DllImport("TxPrnMod.dll", CallingConvention = CallingConvention.StdCall)]
+        static extern bool  TxOpenPrinter(int Type, int Idx);
+        //#define TX_STAT_NOERROR 0x0008 无故障
+        //#define TX_STAT_SELECT 0x0010 处于联机状态
+        //#define TX_STAT_PAPEREND 0x0020 缺纸
+        //#define TX_STAT_BUSY 0x0080 繁忙
+        //#define TX_STAT_DRAW_HIGH 0x0100 钱箱接口的电平（整机使用的， 模块无用）
+        //#define TX_STAT_COVER 0x0200 打印机机芯的盖子打开
+        //#define TX_STAT_ERROR 0x0400 打印机错误
+        //#define TX_STAT_RCV_ERR 0x0800 可恢复错误（需要人工干预）
+        //#define TX_STAT_CUT_ERR 0x1000 切刀错误
+        //#define TX_STAT_URCV_ERR 0x2000 不可恢复错误
+        //#define TX_STAT_ARCV_ERR 0x4000 可自动恢复的错误
+        //#define TX_STAT_PAPER_NE 0x8000 快要没有纸了
+        [DllImport("TxPrnMod.dll", CallingConvention = CallingConvention.StdCall)]
+        static extern int  TxGetStatus();//获取打印机状态
+
+        [DllImport("TxPrnMod.dll", CallingConvention = CallingConvention.StdCall)]
+        static extern void TxClosePrinter();//关闭所连接的打印机
+
+        [DllImport("TxPrnMod.dll", CallingConvention = CallingConvention.StdCall)]
+        static extern bool  TxWritePrinter(byte[] buf, int len);//输出指定的缓冲buf : 为缓冲区指针len : 为缓冲区长度
+
+        [DllImport("TxPrnMod.dll", CallingConvention = CallingConvention.StdCall)]
+        static extern int TxReadPrinter(byte[] buf, int len);//从打印机读取数据buf : 为接收缓冲len : 为欲读取的字节数
+
+        [DllImport("TxPrnMod.dll", CallingConvention = CallingConvention.StdCall)]
+        static extern void TxInit();//发送初始化指令， 初始化打印机
+
+        //串口设置参数的定义如下
+        public UInt32 TX_SER_BAUD_MASK = 0xFF000000; //波特率
+        public UInt32 TX_SER_BAUD9600 = 0x00000000;// 9600 的波特率
+        public UInt32 TX_SER_BAUD19200 = 0x01000000;// 19200 的波特率
+        public UInt32 TX_SER_BAUD38400 = 0x02000000; // 38400 的波特率
+        public UInt32 TX_SER_BAUD57600 = 0x03000000; // 57600 的波特率
+        public UInt32 TX_SER_BAUD115200 = 0x04000000; // 115200 的波特率
+        public UInt32 TX_SER_DATA_MASK = 0x00FF0000; // 数据位
+        public UInt32 TX_SER_DATA_8BITS = 0x00000000; // 8 位数据位
+        public UInt32 TX_SER_DATA_7BITS = 0x00010000; // 7 为数据位
+        public UInt32 TX_SER_PARITY_MASK = 0x0000FF00; // 校验
+        public UInt32 TX_SER_PARITY_NONE = 0x00000000; // 无校验
+        public UInt32 TX_SER_PARITY_EVEN = 0x00000100; // 偶校验
+        public UInt32 TX_SER_PARITY_ODD = 0x00000200; // 奇校验
+        public UInt32 TX_SER_STOP_MASK = 0x000000F0; // 停止位
+        public UInt32 TX_SER_STOP_1BITS = 0x00000000; // 1 位停止位
+        public UInt32 TX_SER_STOP_15BITS = 0x00000010; // 1.5 位停止位
+        public UInt32 TX_SER_STOP_2BITS = 0x00000020; // 2 位停止位
+        public UInt32 TX_SER_FLOW_MASK = 0x0000000F; // 流控制
+        public UInt32 TX_SER_FLOW_NONE = 0x00000000; // 无流控
+        public UInt32 TX_SER_FLOW_HARD = 0x00000001; // 硬件流控（DTR/DSR 方式）
+        public UInt32 TX_SER_FLOW_SOFT = 0x00000002; // 软件流控（XON/XOFF 方式）
+        //attr 参数是波特率， 数据位， 校验位， 停止位， 流控位的组合
+        //TxSetupSerial(TX_SER_BAUD38400|TX_SER_DATA_8BITS|TX_SER_PARITY_NONE|TX_S
+        //ER_STOP_1BITS|TX_SER_FLOW_HARD);
+        //上面的例子就是设置串口位 38400 的波特率， 8 位数据位， 无校验， 1 位停止位， 硬件流控。
+        [DllImport("TxPrnMod.dll", CallingConvention = CallingConvention.StdCall)]
+        static extern void TxSetupSerial(UInt32 attr);//设置串口参数
+
+        [DllImport("TxPrnMod.dll", CallingConvention = CallingConvention.StdCall)]
+        static extern void TxOutputStringLn(string str);//输出字符串（以\0 结束）， 并自动添加回车、 换行
+
+        [DllImport("TxPrnMod.dll", CallingConvention = CallingConvention.StdCall)]
+        static extern void  TxNewline();//输出回车、 换行， 就是向打印机发送 0x0D,0x0A 的数据， 打印机接收到后， 会将缓冲区中的数据打印并走纸 1 行
         #endregion
         /// <summary>
         /// 窗体加载
@@ -67,9 +177,10 @@ namespace SeatReplacement
             ShowTimer.Tick += new EventHandler(ShowCurTimer);//起个Timer一直获取当前时间
             ShowTimer.Interval = new TimeSpan(0, 0, 0, 1, 0);
             ShowTimer.Start();
-            address = infile.ReadValue("CONFIG", "ADDRESS");
-            addressSave = infile.ReadValue("CONFIG", "ADDRESSSave");
         }
+        /// <summary>
+        /// 显示当前时间
+        /// </summary>
         private void ShowTime()
         {
             //获得年月日
@@ -100,7 +211,6 @@ namespace SeatReplacement
             tIdentity.Start();
             //需要调用 timer.Start()或者timer.Enabled = true来启动它， timer.Start()的内部原理还是设置timer.Enabled = true; 
         }
-       
         public void theoutIdentity(object source, System.Timers.ElapsedEventArgs e)
         {
             tIdentity.Stop();
@@ -108,8 +218,7 @@ namespace SeatReplacement
             try
             {
                 int iRet = 0;
-                //int iPort = Convert.ToInt32(ConfigurationManager.AppSettings["iPort"]);
-                int iPort = 4;
+                int iPort = Convert.ToInt32(ConfigurationManager.AppSettings["IdentityPort"]);
                 //变量声明
                 byte[] CardPUCIIN = new byte[255];
                 byte[] pucManaMsg = new byte[255];
@@ -186,19 +295,22 @@ namespace SeatReplacement
                 var result=ASCIIEncoding.Unicode.GetString(pucCHMsg);
                 this.Dispatcher.Invoke(new Action(() =>
                 {
-                    dayinxieru(result);
-                    streamToPrint = new FileStream(@address, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
-                    // 创建一个PrintDialog的实例。 
-                    PrintDialog PrintDialog1 = new PrintDialog();
-                    // 把PrintDialog的Document属性设为上面配置好的PrintDocument的实例 
-                    streamToPrint.Close();
-                    PrintDocument p = new PrintDocument();
-                    //隐藏 对话框
-                    PrintController printController = new StandardPrintController();
-                    p.PrintController = printController;
-                    //创建打印画布
-                    p.PrintPage += new PrintPageEventHandler(docToPrint_PrintPage);
-                    p.Print();
+
+                    DoPrint(result);
+
+                    //dayinxieru(result);
+                    //streamToPrint = new FileStream(@address, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
+                    //// 创建一个PrintDialog的实例。 
+                    //PrintDialog PrintDialog1 = new PrintDialog();
+                    //// 把PrintDialog的Document属性设为上面配置好的PrintDocument的实例 
+                    //streamToPrint.Close();
+                    //PrintDocument p = new PrintDocument();
+                    ////隐藏 对话框
+                    //PrintController printController = new StandardPrintController();
+                    //p.PrintController = printController;
+                    ////创建打印画布
+                    //p.PrintPage += new PrintPageEventHandler(docToPrint_PrintPage);
+                    //p.Print();
 
                     frameMain.NavigationService.GoBack();
                     this.back.Visibility = Visibility.Hidden;
@@ -210,14 +322,18 @@ namespace SeatReplacement
                 MessageBox.Show(ex.ToString());
             }
         }
-        public void dayinxieru(string result)
+        /// <summary>
+        /// 网络打印机
+        /// </summary>
+        /// <param name="result"></param>
+        public void dayinxieru(List<DJ60_change_seat_log> result)
         {
-            string newTime = "20190521";
-            string checi = "checi";
-            string chexiang = "chexiang";
-            string xiwei = "xiwei";
-            string xchexiang = "xchexiang";
-            string xxiwei = "xxiwei";
+            string newTime = result[0].new_train_date;
+            string checi = result[0].new_train_code;
+            string chexiang = result[0].coach_no;
+            string xiwei = result[0].seat_no;
+            string xchexiang = result[0].new_coach_no;
+            string xxiwei = result[0].new_seat_no;
             //保存打印信息
             StreamWriter sww = new StreamWriter(addressSave, true);
             string strRiqi = DateTime.Now.ToString("yyyy-MM-dd");
@@ -248,13 +364,12 @@ namespace SeatReplacement
             sw.WriteLine("              " + chexiang + "                  " + xiwei);
             sw.WriteLine(" ----------------------------------------------");
             sw.WriteLine("         新车厢            新席位");
-            sw.WriteLine("              " + xchexiang + "                 " + xxiwei);
+            sw.WriteLine("               " + xchexiang + "                 " + xxiwei);
             sw.WriteLine("* * * * * * * * * * * * * * * * * * * * * * * *           ");
             sw.WriteLine(" 打印时间：" + strRiqi + " " + strShijian);
             sw.WriteLine("                                                   ");
             sw.Close();
         }
-
         private void docToPrint_PrintPage(object sender, PrintPageEventArgs e)
         {
             switch (this.streamType)
@@ -319,7 +434,6 @@ namespace SeatReplacement
             tTicket.AutoReset = true;   
             tTicket.Start();
         }
-
         public void theoutTicket(object source, System.Timers.ElapsedEventArgs e)
         {
             tTicket.Stop();
@@ -352,9 +466,20 @@ namespace SeatReplacement
                 if (Length > 0)
                 {
                     result = tempStr.ToString();
-                    this.Dispatcher.Invoke(new Action(() =>
+                    var qrUrl = ConfigurationManager.AppSettings["QRURL"];
+                    string res = RestClient.HttpPost(qrUrl, result);
+                    TicketInfo ticketInfo = JsonConvert.DeserializeObject<TicketInfo>(res);
+                    if (ticketInfo.status==1)
                     {
-                        dayinxieru(result);
+                        TicketGet ticketGet = new TicketGet();
+                        ticketGet.trainDate = ticketInfo.ticket.trainDate;
+                        ticketGet.trainCodeAt = ticketInfo.ticket.trainCodeAt;
+                        ticketGet.coachNo = ticketInfo.ticket.coachNo;
+                        ticketGet.seatNo = ticketInfo.ticket.seatNo;
+                        ticketGet.seatType = ticketInfo.ticket.seatType;
+                        DataTable aa = SQLhelp.GetInfo(ticketGet);
+                        List<DJ60_change_seat_log> listdj= TableToList.ToDataList<DJ60_change_seat_log>(aa);
+                        dayinxieru(listdj);
                         streamToPrint = new FileStream(@address, FileMode.OpenOrCreate, FileAccess.ReadWrite,
                             FileShare.None);
                         // 创建一个PrintDialog的实例。 
@@ -368,6 +493,31 @@ namespace SeatReplacement
                         //创建打印画布
                         p.PrintPage += new PrintPageEventHandler(docToPrint_PrintPage);
                         p.Print();
+
+
+                        //DoPrint(ticketInfo.ticket);
+                    }
+                    else
+                    {//根据二维码信息获取旅客信息失败
+                        return;
+                    }
+                    
+                    this.Dispatcher.Invoke(new Action(() =>
+                    {
+                        //dayinxieru(result);
+                        //streamToPrint = new FileStream(@address, FileMode.OpenOrCreate, FileAccess.ReadWrite,
+                        //    FileShare.None);
+                        //// 创建一个PrintDialog的实例。 
+                        //PrintDialog PrintDialog1 = new PrintDialog();
+                        //// 把PrintDialog的Document属性设为上面配置好的PrintDocument的实例 
+                        //streamToPrint.Close();
+                        //PrintDocument p = new PrintDocument();
+                        ////隐藏 对话框
+                        //PrintController printController = new StandardPrintController();
+                        //p.PrintController = printController;
+                        ////创建打印画布
+                        //p.PrintPage += new PrintPageEventHandler(docToPrint_PrintPage);
+                        //p.Print();
 
                         frameMain.NavigationService.GoBack();
                         this.back.Visibility = Visibility.Hidden;
@@ -385,7 +535,6 @@ namespace SeatReplacement
                 MessageBox.Show(ex.ToString());
             }
         }
-
         /// <summary>
         /// 身份证返回
         /// </summary>
@@ -440,6 +589,43 @@ namespace SeatReplacement
             {
                 tTicket.Stop();
                 tTicket.Close();
+            }
+        }
+        /// <summary>
+        /// 打印机程序
+        /// </summary>
+        /// <param name="result"></param>
+        public void DoPrint(string result)
+        {
+            string newTime = "5月28日";
+            string checi = "T5461";
+            string chexiang = "03";
+            string xiwei = "17B";
+            string xchexiang = "06";
+            string xxiwei = "19C";
+            int TX_TYPE = Convert.ToInt32(ConfigurationManager.AppSettings["TX_TYPE"]);
+            int TX_Port = Convert.ToInt32(ConfigurationManager.AppSettings["TX_Port"]);
+            if (TxOpenPrinter(TX_TYPE, TX_Port))
+            {
+                TxSetupSerial(TX_SER_BAUD38400 | TX_SER_DATA_8BITS | TX_SER_PARITY_NONE | TX_SER_STOP_1BITS | TX_SER_FLOW_HARD);
+                int a = TxGetStatus();
+                if (a!= 0x0008)
+                {
+                    MessageBox.Show(a.ToString());
+                }
+                TxInit();
+                TxOutputStringLn("   欢迎乘坐西安北动车    ");
+                TxNewline();
+                TxOutputStringLn("您打印的车次" + newTime + " " + checi + "次");
+                TxOutputStringLn("* * * * * * * * * * * * *");
+                TxOutputStringLn("   原车厢        原席位  ");
+                TxOutputStringLn("   "+ chexiang+"       "+ xiwei);
+                TxOutputStringLn(" ----------------------- ");
+                TxOutputStringLn("   新车厢        新席位  ");
+                TxOutputStringLn("   " + xchexiang + "       " + xxiwei);
+                TxOutputStringLn("* * * * * * * * * * * * *");
+                TxOutputStringLn("打印时间："+ DateTime.Now.ToLocalTime().ToString());
+                TxClosePrinter();
             }
         }
     }
