@@ -33,34 +33,34 @@ namespace SeatReplacement
         public MainWindow()
         {
             InitializeComponent();
-            //address = infile.ReadValue("CONFIG", "ADDRESS");
-            //addressSave = infile.ReadValue("CONFIG", "ADDRESSSave");
-            //string a = "020569780311932141656018027901188600178574445818676009179083681404611325017558988810910223024416059959220427736603679376380069730519525691492099";
-            //var qrUrl = ConfigurationManager.AppSettings["QRURL"];
-            //string res = RestClient.HttpPost(qrUrl, a);
-            //TicketInfo ticketInfo = JsonConvert.DeserializeObject<TicketInfo>(res);
-            //TicketGet ticketGet = new TicketGet();
-            //ticketGet.trainDate = ticketInfo.ticket.trainDate;
-            //ticketGet.trainCodeAt = ticketInfo.ticket.trainCodeAt;
-            //ticketGet.coachNo = ticketInfo.ticket.coachNo;
-            //ticketGet.seatNo = ticketInfo.ticket.seatNo;
-            //ticketGet.seatType = ticketInfo.ticket.seatType;
-            //DataTable aa = SQLhelp.GetInfo(ticketGet);
-            //List<DJ60_change_seat_log> listdj = TableToList.ToDataList<DJ60_change_seat_log>(aa);
-            //dayinxieru(listdj);
-            //streamToPrint = new FileStream(@address, FileMode.OpenOrCreate, FileAccess.ReadWrite,
-            //    FileShare.None);
-            //// 创建一个PrintDialog的实例。 
-            //PrintDialog PrintDialog1 = new PrintDialog();
-            //// 把PrintDialog的Document属性设为上面配置好的PrintDocument的实例 
-            //streamToPrint.Close();
-            //PrintDocument p = new PrintDocument();
-            ////隐藏 对话框
-            //PrintController printController = new StandardPrintController();
-            //p.PrintController = printController;
-            ////创建打印画布
-            //p.PrintPage += new PrintPageEventHandler(docToPrint_PrintPage);
-            //p.Print();
+            address = infile.ReadValue("CONFIG", "ADDRESS");
+            addressSave = infile.ReadValue("CONFIG", "ADDRESSSave");
+            string a = "020569780311932141656018027901188600178574445818676009179083681404611325017558988810910223024416059959220427736603679376380069730519525691492099";
+            var qrUrl = ConfigurationManager.AppSettings["QRURL"];
+            string res = RestClient.HttpPost(qrUrl, a);
+            TicketInfo ticketInfo = JsonConvert.DeserializeObject<TicketInfo>(res);
+            TicketGet ticketGet = new TicketGet();
+            ticketGet.trainDate = ticketInfo.ticket.trainDate;
+            ticketGet.trainCodeAt = ticketInfo.ticket.trainCodeAt;
+            ticketGet.coachNo = ticketInfo.ticket.coachNo;
+            ticketGet.seatNo = ticketInfo.ticket.seatNo;
+            ticketGet.seatType = ticketInfo.ticket.seatType;
+            DataTable aa = SQLhelp.GetInfo(ticketGet);
+            List<DJ60_change_seat_log> listdj = TableToList.ToDataList<DJ60_change_seat_log>(aa);
+            dayinxieru(listdj);
+            streamToPrint = new FileStream(@address, FileMode.OpenOrCreate, FileAccess.ReadWrite,
+                FileShare.None);
+            // 创建一个PrintDialog的实例。 
+            PrintDialog PrintDialog1 = new PrintDialog();
+            // 把PrintDialog的Document属性设为上面配置好的PrintDocument的实例 
+            streamToPrint.Close();
+            PrintDocument p = new PrintDocument();
+            //隐藏 对话框
+            PrintController printController = new StandardPrintController();
+            p.PrintController = printController;
+            //创建打印画布
+            p.PrintPage += new PrintPageEventHandler(docToPrint_PrintPage);
+            p.Print();
         }
         #region API声明
         [DllImport("sdtapi.dll", CallingConvention = CallingConvention.StdCall)]
